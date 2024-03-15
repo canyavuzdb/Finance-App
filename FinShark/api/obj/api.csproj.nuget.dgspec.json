@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mcy/Desktop/FinShark/api/api.csproj": {}
+    "/Users/mcy/Documents/GitHub/FinShark/FinShark/api/api.csproj": {}
   },
   "projects": {
-    "/Users/mcy/Desktop/FinShark/api/api.csproj": {
+    "/Users/mcy/Documents/GitHub/FinShark/FinShark/api/api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mcy/Desktop/FinShark/api/api.csproj",
+        "projectUniqueName": "/Users/mcy/Documents/GitHub/FinShark/FinShark/api/api.csproj",
         "projectName": "api",
-        "projectPath": "/Users/mcy/Desktop/FinShark/api/api.csproj",
+        "projectPath": "/Users/mcy/Documents/GitHub/FinShark/FinShark/api/api.csproj",
         "packagesPath": "/Users/mcy/.nuget/packages/",
-        "outputPath": "/Users/mcy/Desktop/FinShark/api/obj/",
+        "outputPath": "/Users/mcy/Documents/GitHub/FinShark/FinShark/api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mcy/.nuget/NuGet/NuGet.Config"
