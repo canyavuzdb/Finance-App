@@ -34,7 +34,7 @@ namespace api.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
-            var stock = await _context.Stocks.FindAsync(id);  
+            var stock = await _stockRepository.GetByIdAsync(id);  
 
             if(stock == null)
             {
@@ -48,8 +48,7 @@ namespace api.Controllers
         public async Task<IActionResult> Create([FromBody] CreateStockRequestDto StockDto)
         {
             var stock = StockDto.ToStockFromCreateDTO();
-            await _context.Stocks.AddAsync(stock);
-            await _context.SaveChangesAsync();
+            await _stockRepository.CreateAsync(stock);
             return CreatedAtAction(nameof(GetById), new { id = stock.ID }, stock.ToStockDto());
         }
 
@@ -57,20 +56,13 @@ namespace api.Controllers
         [Route("{id}")]
         public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateStockRequestDto updateDto)
         {
-            var stock = await _context.Stocks.FirstOrDefaultAsync(x => x.ID == id); 
+            var stock = await _stockRepository.UpdateAsync(id, updateDto); 
 
             if(stock == null)
             {
                 return NotFound();
             }   
 
-            stock.Symbol = updateDto.Symbol;
-            stock.CompanyName = updateDto.CompanyName;
-            stock.Purchase = updateDto.Purchase;
-            stock.LastDiv = updateDto.LastDiv;
-            stock.Industry = updateDto.Industry;
-            stock.MarketCap = updateDto.MarketCap;
-            await _context.SaveChangesAsync();
             return Ok(stock.ToStockDto());  
 
         }
@@ -79,13 +71,12 @@ namespace api.Controllers
         [Route("{id}")]
         public async Task<IActionResult> Delete([FromRoute] int id)
         {
-            var stock = _context.Stocks.FirstOrDefaultAsync(x => x.ID == id);
+            var stock = await _stockRepository.DeleteAsync(id);
             if(stock == null)
             {
                 return NotFound();
             }   
-            _context.Remove(stock);
-            await _context.SaveChangesAsync();
+            
             return NoContent();
         }
     }
