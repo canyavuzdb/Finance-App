@@ -288,3 +288,5 @@
 /Users/mcy/Documents/GitHub/FinShark/FinShark/api/bin/Debug/net8.0/Microsoft.AspNetCore.JsonPatch.dll
 /Users/mcy/Documents/GitHub/FinShark/FinShark/api/bin/Debug/net8.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 /Users/mcy/Documents/GitHub/FinShark/FinShark/api/bin/Debug/net8.0/Newtonsoft.Json.Bson.dll
+/Users/mcy/Documents/GitHub/FinShark/FinShark/api/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/mcy/Documents/GitHub/FinShark/FinShark/api/bin/Debug/net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
