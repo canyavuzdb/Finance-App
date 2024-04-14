@@ -56,12 +56,12 @@ namespace api.Repository
             {
                 if (queryObject.SortBy.Equals("Symbol", StringComparison.OrdinalIgnoreCase))
                 {
-                    stocks = queryObject.IsDecsending ? stocks.OrderByDescending(x => x.Symbol) : stocks.OrderBy(x => x.Symbol);
+                    stocks = queryObject.IsDescending ? stocks.OrderByDescending(x => x.Symbol) : stocks.OrderBy(x => x.Symbol);
                 }
             }
 
             var skipNumber = (queryObject.PageNumber-1) * queryObject.PageSize;
-            return await stocks.Skip(skipNumber).Take(queryObject.PageSize).ToListAsync();
+            return await stocks.Skip(skipNumber).Take(queryObject.PageSize ).ToListAsync();
         }
 
         public async Task<Stock?> GetByIdAsync(int id)
