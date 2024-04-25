@@ -8251,11 +8251,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mcy/Documents/GitHub/FinShark/FinShark/api/api.csproj",
+      "projectUniqueName": "/Users/mcy/Documents/GitHub/FinShark/FinanceApp/api/api.csproj",
       "projectName": "api",
-      "projectPath": "/Users/mcy/Documents/GitHub/FinShark/FinShark/api/api.csproj",
+      "projectPath": "/Users/mcy/Documents/GitHub/FinShark/FinanceApp/api/api.csproj",
       "packagesPath": "/Users/mcy/.nuget/packages/",
-      "outputPath": "/Users/mcy/Documents/GitHub/FinShark/FinShark/api/obj/",
+      "outputPath": "/Users/mcy/Documents/GitHub/FinShark/FinanceApp/api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/mcy/.nuget/NuGet/NuGet.Config"

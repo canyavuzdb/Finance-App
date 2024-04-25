@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XS92wKhz8trnrBf512f4DyNzHCS71G7KrSnFKv554vuSoZEcMA6e/Chqwi/rAP1W3dts3xu47rzAAIzlSpfodg==",
+  "dgSpecHash": "d9BzT6c2K8UtTBvkEf0/nW4ZpIvaWyNl8W2GzTVun6JBNCbKQBXbmFk08IQgX4AXhpXKs3fgb7DJXU/soTXUBw==",
   "success": true,
-  "projectFilePath": "/Users/mcy/Documents/GitHub/FinShark/FinShark/api/api.csproj",
+  "projectFilePath": "/Users/mcy/Documents/GitHub/FinShark/FinanceApp/api/api.csproj",
   "expectedPackageFiles": [
     "/Users/mcy/.nuget/packages/azure.core/1.25.0/azure.core.1.25.0.nupkg.sha512",
     "/Users/mcy/.nuget/packages/azure.identity/1.7.0/azure.identity.1.7.0.nupkg.sha512",
