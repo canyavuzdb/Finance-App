@@ -465,11 +465,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mcy/Desktop/FinShark/api/api.csproj",
+      "projectUniqueName": "/Users/mcy/Documents/GitHub/FinShark/Finance-App/api/api.csproj",
       "projectName": "api",
-      "projectPath": "/Users/mcy/Desktop/FinShark/api/api.csproj",
+      "projectPath": "/Users/mcy/Documents/GitHub/FinShark/Finance-App/api/api.csproj",
       "packagesPath": "/Users/mcy/.nuget/packages/",
-      "outputPath": "/Users/mcy/Desktop/FinShark/api/obj/",
+      "outputPath": "/Users/mcy/Documents/GitHub/FinShark/Finance-App/api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/mcy/.nuget/NuGet/NuGet.Config"
@@ -529,7 +529,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

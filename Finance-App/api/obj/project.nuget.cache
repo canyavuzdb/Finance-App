@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ClWoMXFqKHFwcFnjspEuH2XPpcVbvxxooLmi9Z7AQwISr9KwG9nsDK0ZZqrdYcciG+Om/6Pv9D9IhOxw8cE9cw==",
+  "dgSpecHash": "NwWaDRywXUljk+MXP7isSwjQxMR7/xJuNLdw3vEqkyK667JM0qynGbsVc1ktls8ENs8sH0kqbG4+7hK10B7reA==",
   "success": true,
-  "projectFilePath": "/Users/mcy/Desktop/FinShark/api/api.csproj",
+  "projectFilePath": "/Users/mcy/Documents/GitHub/FinShark/Finance-App/api/api.csproj",
   "expectedPackageFiles": [
     "/Users/mcy/.nuget/packages/microsoft.aspnetcore.openapi/8.0.2/microsoft.aspnetcore.openapi.8.0.2.nupkg.sha512",
     "/Users/mcy/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
