@@ -51,13 +51,13 @@ namespace api.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "a175eb30-9711-40aa-9ed2-f48008b832f3",
+                            Id = "d5928cb7-f725-4f29-b28e-d23bb0a0232f",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "5c9ca752-b744-4574-8a28-f97cedb273e0",
+                            Id = "c44b2e6b-6db1-4baf-974c-07b9e5f1afc8",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -242,6 +242,9 @@ namespace api.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("Content")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -257,6 +260,8 @@ namespace api.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
 
                     b.HasIndex("StockID");
 
@@ -365,9 +370,15 @@ namespace api.Migrations
 
             modelBuilder.Entity("api.Models.Comment", b =>
                 {
+                    b.HasOne("api.Models.AppUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("AppUserId");
+
                     b.HasOne("api.Models.Stock", "Stock")
                         .WithMany("Comments")
                         .HasForeignKey("StockID");
+
+                    b.Navigation("AppUser");
 
                     b.Navigation("Stock");
                 });
