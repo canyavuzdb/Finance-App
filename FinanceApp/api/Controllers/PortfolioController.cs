@@ -8,6 +8,7 @@ using api.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.Elfie.Model;
 
 namespace api.Controllers
 {
@@ -23,7 +24,7 @@ namespace api.Controllers
         {
             _userManager = userManager;
             _stockRepository = stockRepository;
-            _portfolioRepository = portfolioRepository; 
+            _portfolioRepository = portfolioRepository;
         }
 
         [HttpGet]
@@ -34,6 +35,30 @@ namespace api.Controllers
             var appUser = await _userManager.FindByNameAsync(username);
             var userPortfolio = await _portfolioRepository.GetUserPortfolio(appUser);
             return Ok(userPortfolio);
+        }
+        [HttpPut]
+        [Authorize]
+        public async Task<IActionResult> AddPortfolio(string symbol)
+        {
+            var username = User.GetUsername();
+            var appUser = await _userManager.FindByNameAsync(username);
+            var stock = await _stockRepository.GetSymbolAsync(symbol);
+
+            if (stock == null) return BadRequest("Stock does not exist");
+
+            var userPortfolio = await _portfolioRepository.GetUserPortfolio(appUser);
+
+            if (userPortfolio.Any(x => x.Symbol.ToLower() == symbol.ToLower())) return BadRequest("Stock already in portfolio");
+
+            var newStock = new Portfolio
+            {
+                AppUserId = appUser.Id,
+                StockId = stock.Id
+            };
+            await _portfolioRepository.AddPortfolio(newStock);
+            if (newStock == null) return StatusCode(500, "Failed to add stock to portfolio");
+            else { return Created(); }
+
         }
     }
 }
