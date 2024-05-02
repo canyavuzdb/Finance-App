@@ -78,7 +78,7 @@
           "Humanizer.Core.hr": "2.14.1",
           "Humanizer.Core.hu": "2.14.1",
           "Humanizer.Core.hy": "2.14.1",
-          "Humanizer.Core.id": "2.14.1",
+          "Humanizer.Core.Id": "2.14.1",
           "Humanizer.Core.is": "2.14.1",
           "Humanizer.Core.it": "2.14.1",
           "Humanizer.Core.ja": "2.14.1",
@@ -298,12 +298,12 @@
           }
         }
       },
-      "Humanizer.Core.id/2.14.1": {
+      "Humanizer.Core.Id/2.14.1": {
         "dependencies": {
           "Humanizer.Core": "2.14.1"
         },
         "resources": {
-          "lib/net6.0/id/Humanizer.resources.dll": {
+          "lib/net6.0/Id/Humanizer.resources.dll": {
             "locale": "id"
           }
         }
@@ -2146,11 +2146,11 @@
       "path": "humanizer.core.hy/2.14.1",
       "hashPath": "humanizer.core.hy.2.14.1.nupkg.sha512"
     },
-    "Humanizer.Core.id/2.14.1": {
+    "Humanizer.Core.Id/2.14.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-4Zl3GTvk3a49Ia/WDNQ97eCupjjQRs2iCIZEQdmkiqyaLWttfb+cYXDMGthP42nufUL0SRsvBctN67oSpnXtsg==",
-      "path": "humanizer.core.id/2.14.1",
+      "path": "humanizer.core.Id/2.14.1",
       "hashPath": "humanizer.core.id.2.14.1.nupkg.sha512"
     },
     "Humanizer.Core.is/2.14.1": {

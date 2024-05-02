@@ -34,12 +34,12 @@ namespace api.Controllers
             return Ok(stocks);
         }
 
-        [HttpGet("{id:int}")]
-        public async Task<IActionResult> GetById([FromRoute] int id)
+        [HttpGet("{Id:int}")]
+        public async Task<IActionResult> GetById([FromRoute] int Id)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            var stock = await _stockRepository.GetByIdAsync(id);
+            var stock = await _stockRepository.GetByIdAsync(Id);
 
             if (stock == null)
             {
@@ -56,16 +56,16 @@ namespace api.Controllers
 
             var stock = StockDto.ToStockFromCreateDTO();
             await _stockRepository.CreateAsync(stock);
-            return CreatedAtAction(nameof(GetById), new { id = stock.ID }, stock.ToStockDto());
+            return CreatedAtAction(nameof(GetById), new { Id = stock.Id }, stock.ToStockDto());
         }
 
         [HttpPut]
-        [Route("{id:int}")]
-        public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateStockRequestDto updateDto)
+        [Route("{Id:int}")]
+        public async Task<IActionResult> Update([FromRoute] int Id, [FromBody] UpdateStockRequestDto updateDto)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            var stock = await _stockRepository.UpdateAsync(id, updateDto);
+            var stock = await _stockRepository.UpdateAsync(Id, updateDto);
 
             if (stock == null)
             {
@@ -77,12 +77,12 @@ namespace api.Controllers
         }
 
         [HttpDelete]
-        [Route("{id:int}")]
-        public async Task<IActionResult> Delete([FromRoute] int id)
+        [Route("{Id:int}")]
+        public async Task<IActionResult> Delete([FromRoute] int Id)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            var stock = await _stockRepository.DeleteAsync(id);
+            var stock = await _stockRepository.DeleteAsync(Id);
             if (stock == null)
             {
                 return NotFound();

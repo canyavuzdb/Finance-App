@@ -67,7 +67,7 @@
           "Humanizer.Core.hr": "2.14.1",
           "Humanizer.Core.hu": "2.14.1",
           "Humanizer.Core.hy": "2.14.1",
-          "Humanizer.Core.id": "2.14.1",
+          "Humanizer.Core.Id": "2.14.1",
           "Humanizer.Core.is": "2.14.1",
           "Humanizer.Core.it": "2.14.1",
           "Humanizer.Core.ja": "2.14.1",
@@ -310,14 +310,14 @@
           }
         }
       },
-      "Humanizer.Core.id/2.14.1": {
+      "Humanizer.Core.Id/2.14.1": {
         "type": "package",
         "dependencies": {
           "Humanizer.Core": "[2.14.1]"
         },
         "resource": {
-          "lib/net6.0/id/Humanizer.resources.dll": {
-            "locale": "id"
+          "lib/net6.0/Id/Humanizer.resources.dll": {
+            "locale": "Id"
           }
         }
       },
@@ -3288,18 +3288,18 @@
         "logo.png"
       ]
     },
-    "Humanizer.Core.id/2.14.1": {
+    "Humanizer.Core.Id/2.14.1": {
       "sha512": "4Zl3GTvk3a49Ia/WDNQ97eCupjjQRs2iCIZEQdmkiqyaLWttfb+cYXDMGthP42nufUL0SRsvBctN67oSpnXtsg==",
       "type": "package",
-      "path": "humanizer.core.id/2.14.1",
+      "path": "humanizer.core.Id/2.14.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "humanizer.core.id.2.14.1.nupkg.sha512",
-        "humanizer.core.id.nuspec",
-        "lib/net6.0/id/Humanizer.resources.dll",
-        "lib/netstandard1.0/id/Humanizer.resources.dll",
-        "lib/netstandard2.0/id/Humanizer.resources.dll",
+        "humanizer.core.Id.2.14.1.nupkg.sha512",
+        "humanizer.core.Id.nuspec",
+        "lib/net6.0/Id/Humanizer.resources.dll",
+        "lib/netstandard1.0/Id/Humanizer.resources.dll",
+        "lib/netstandard2.0/Id/Humanizer.resources.dll",
         "logo.png"
       ]
     },

@@ -30,12 +30,12 @@ namespace api.Controllers
             return Ok(commentsDto);
         }
 
-        [HttpGet("{id:int}")]
-        public async Task<IActionResult> GetById([FromRoute] int id)
+        [HttpGet("{Id:int}")]
+        public async Task<IActionResult> GetById([FromRoute] int Id)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            var comment = await _commentRepository.GetByIdAsync(id);
+            var comment = await _commentRepository.GetByIdAsync(Id);
             if (comment == null)
             {
                 return NotFound();
@@ -55,15 +55,15 @@ namespace api.Controllers
             var comment = commentDto.ToCommentFromCreate(stockId);
             comment.StockID = stockId;
             await _commentRepository.CreateAsync(comment);
-            return CreatedAtAction(nameof(GetById), new { id = comment.ID }, comment.ToCommentDto());
+            return CreatedAtAction(nameof(GetById), new { Id = comment.Id }, comment.ToCommentDto());
         }
         [HttpPut]
-        [Route("{id:int}")]
-        public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateCommentRequestDto updateDto)
+        [Route("{Id:int}")]
+        public async Task<IActionResult> Update([FromRoute] int Id, [FromBody] UpdateCommentRequestDto updateDto)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            var comment = await _commentRepository.UpdateAsync(id, updateDto.ToCommentFromUpdate(id));
+            var comment = await _commentRepository.UpdateAsync(Id, updateDto.ToCommentFromUpdate(Id));
             if (comment == null)
             {
                 return NotFound("Comment does not exist");
@@ -71,10 +71,10 @@ namespace api.Controllers
             return Ok(comment.ToCommentDto());
         }
         [HttpDelete]
-        [Route("{id:int}")]
-        public async Task<IActionResult> Delete([FromRoute] int id)
+        [Route("{Id:int}")]
+        public async Task<IActionResult> Delete([FromRoute] int Id)
         {
-            var comment = await _commentRepository.DeleteAsync(id);
+            var comment = await _commentRepository.DeleteAsync(Id);
             if (comment == null)
             {
                 return NotFound("Comment does not exist");

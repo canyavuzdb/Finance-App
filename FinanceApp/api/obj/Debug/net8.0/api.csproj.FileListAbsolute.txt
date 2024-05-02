@@ -212,7 +212,7 @@
 /Users/mcy/Documents/GitHub/FinanceApp/FinanceApp/api/bin/Debug/net8.0/hr/Humanizer.resources.dll
 /Users/mcy/Documents/GitHub/FinanceApp/FinanceApp/api/bin/Debug/net8.0/hu/Humanizer.resources.dll
 /Users/mcy/Documents/GitHub/FinanceApp/FinanceApp/api/bin/Debug/net8.0/hy/Humanizer.resources.dll
-/Users/mcy/Documents/GitHub/FinanceApp/FinanceApp/api/bin/Debug/net8.0/id/Humanizer.resources.dll
+/Users/mcy/Documents/GitHub/FinanceApp/FinanceApp/api/bin/Debug/net8.0/Id/Humanizer.resources.dll
 /Users/mcy/Documents/GitHub/FinanceApp/FinanceApp/api/bin/Debug/net8.0/is/Humanizer.resources.dll
 /Users/mcy/Documents/GitHub/FinanceApp/FinanceApp/api/bin/Debug/net8.0/it/Humanizer.resources.dll
 /Users/mcy/Documents/GitHub/FinanceApp/FinanceApp/api/bin/Debug/net8.0/ja/Humanizer.resources.dll
@@ -395,7 +395,7 @@
 /Users/mcy/Documents/GitHub/FinShark/FinanceApp/api/bin/Debug/net8.0/hr/Humanizer.resources.dll
 /Users/mcy/Documents/GitHub/FinShark/FinanceApp/api/bin/Debug/net8.0/hu/Humanizer.resources.dll
 /Users/mcy/Documents/GitHub/FinShark/FinanceApp/api/bin/Debug/net8.0/hy/Humanizer.resources.dll
-/Users/mcy/Documents/GitHub/FinShark/FinanceApp/api/bin/Debug/net8.0/id/Humanizer.resources.dll
+/Users/mcy/Documents/GitHub/FinShark/FinanceApp/api/bin/Debug/net8.0/Id/Humanizer.resources.dll
 /Users/mcy/Documents/GitHub/FinShark/FinanceApp/api/bin/Debug/net8.0/is/Humanizer.resources.dll
 /Users/mcy/Documents/GitHub/FinShark/FinanceApp/api/bin/Debug/net8.0/it/Humanizer.resources.dll
 /Users/mcy/Documents/GitHub/FinShark/FinanceApp/api/bin/Debug/net8.0/ja/Humanizer.resources.dll

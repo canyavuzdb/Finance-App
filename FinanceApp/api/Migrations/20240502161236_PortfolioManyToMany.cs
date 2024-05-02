@@ -56,7 +56,7 @@ namespace api.Migrations
                 name: "Stocks",
                 columns: table => new
                 {
-                    ID = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Symbol = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CompanyName = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -67,7 +67,7 @@ namespace api.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Stocks", x => x.ID);
+                    table.PrimaryKey("PK_Stocks", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -180,7 +180,7 @@ namespace api.Migrations
                 name: "Comments",
                 columns: table => new
                 {
-                    ID = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Content = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -189,12 +189,12 @@ namespace api.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Comments", x => x.ID);
+                    table.PrimaryKey("PK_Comments", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Comments_Stocks_StockID",
                         column: x => x.StockID,
                         principalTable: "Stocks",
-                        principalColumn: "ID");
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -217,7 +217,7 @@ namespace api.Migrations
                         name: "FK_Portfolios_Stocks_StockId",
                         column: x => x.StockId,
                         principalTable: "Stocks",
-                        principalColumn: "ID",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -226,8 +226,8 @@ namespace api.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "78bb0e63-1647-4958-b807-d3803b4568f7", null, "User", "USER" },
-                    { "daecf39f-e1ff-4929-82d1-f72d6d7db379", null, "Admin", "ADMIN" }
+                    { "5c9ca752-b744-4574-8a28-f97cedb273e0", null, "User", "USER" },
+                    { "a175eb30-9711-40aa-9ed2-f48008b832f3", null, "Admin", "ADMIN" }
                 });
 
             migrationBuilder.CreateIndex(

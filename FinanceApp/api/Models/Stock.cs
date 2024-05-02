@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace api.Models
 {
-    [Table("Stocks")]
+    
     public class Stock
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
 
         public string Symbol { get; set; } = string.Empty;
 

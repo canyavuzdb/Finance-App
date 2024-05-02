@@ -27,9 +27,9 @@ namespace api.Repository
             return stock;
         }
 
-        public async Task<Stock?> DeleteAsync(int id)
+        public async Task<Stock?> DeleteAsync(int Id)
         {
-            var stock = await _context.Stocks.FirstOrDefaultAsync(x => x.ID == id);
+            var stock = await _context.Stocks.FirstOrDefaultAsync(x => x.Id == Id);
 
             if (stock == null)
             {
@@ -64,19 +64,19 @@ namespace api.Repository
             return await stocks.Skip(skipNumber).Take(queryObject.PageSize ).ToListAsync();
         }
 
-        public async Task<Stock?> GetByIdAsync(int id)
+        public async Task<Stock?> GetByIdAsync(int Id)
         {
-            return await _context.Stocks.Include(x => x.Comments).FirstOrDefaultAsync(x => x.ID == id);
+            return await _context.Stocks.Include(x => x.Comments).FirstOrDefaultAsync(x => x.Id == Id);
         }
 
-        public Task<bool> StockExists(int id)
+        public Task<bool> StockExists(int Id)
         {
-            return _context.Stocks.AnyAsync(x => x.ID == id);
+            return _context.Stocks.AnyAsync(x => x.Id == Id);
         }
 
-        public async Task<Stock?> UpdateAsync(int id, UpdateStockRequestDto stockDto)
+        public async Task<Stock?> UpdateAsync(int Id, UpdateStockRequestDto stockDto)
         {
-            var existingStock = _context.Stocks.FirstOrDefault(x => x.ID == id);
+            var existingStock = _context.Stocks.FirstOrDefault(x => x.Id == Id);
             if (existingStock == null)
             {
                 return null;

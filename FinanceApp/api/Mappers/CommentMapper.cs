@@ -13,7 +13,7 @@ namespace api.Mappers
         {
             return new CommentDto
             {
-                ID = commentModel.ID,
+                Id = commentModel.Id,
                 Title = commentModel.Title,
                 Content = commentModel.Content,
                 CreatedOn = commentModel.CreatedOn,

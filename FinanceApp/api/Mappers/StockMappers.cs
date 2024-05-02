@@ -13,7 +13,7 @@ namespace api.Mappers
         {
             return new StockDto
             {
-                ID = stockModel.ID,
+                Id = stockModel.Id,
                 Symbol = stockModel.Symbol,
                 CompanyName = stockModel.CompanyName,
                 Purchase = stockModel.Purchase,
